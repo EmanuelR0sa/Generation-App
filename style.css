@@ -63,9 +63,8 @@ input {
 }
 
 .memecontainer {
-  height: 400px;
-  width: 300px;
-  background-color: rgb(89, 89, 109);
+  height: auto;
+  width: auto;
   z-index: 1000;
   position: absolute;
   display: none;

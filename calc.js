@@ -6,12 +6,23 @@ const age = function (birthYear) {
   return currentYear - birthYear;
 };
 
+//Run Meme gif
+
+memeAction = function () {
+  setTimeout(() => {
+    memeClip.classList.toggle("memecontainer--on");
+  }, 4000);
+  setTimeout(() => {
+    memeClip.classList.remove("memecontainer--on");
+  }, 16000);
+};
+
 // Get generation
 
 const generation = function (birthYear) {
   if (birthYear >= 1901 && birthYear <= 1924) {
     myGen.innerHTML = "you belong to the Greatest Generation";
-    memeClip.classList.toggle("memecontainer--on");
+    memeAction();
   }
   if (birthYear >= 1925 && birthYear <= 1945) {
     myGen.innerHTML = "you belong to the Silent Generation";
@@ -41,7 +52,7 @@ const myGen = document.getElementById("resultTextGen");
 const memeClip = document.querySelector(".memecontainer");
 
 const whatIsMyAge = function () {
-  answer.innerHTML = ` you have ${age(input.value)} years old.`;
+  answer.innerHTML = ` ${age(input.value)} years old.`;
   generation(input.value);
 };
 
