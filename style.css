@@ -22,12 +22,18 @@ h2 {
   font-size: 30px;
 }
 
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 .maincontainer {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  position: relative;
 }
 
 .inputcontainer {
@@ -70,6 +76,6 @@ input {
   display: none;
 }
 
-.memecontainer--on {
+.--on {
   display: block;
 }
